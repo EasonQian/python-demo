@@ -80,3 +80,19 @@ print strings
 import math
 print [math.pow(x, 2) for x in range(5)]
 print [(x, y) for x in range(5) for y in range(3)] # liek enum
+
+# pass
+a = 1
+if a == 1:
+	pass # in python empty code bolck is illegal, must add a pass!!!
+else:
+	print 'a is not 1'
+	
+# del 删除变量或数据结构的一部分，但是不能用来删除值
+
+# exec: 动态执行py代码, but has many hidden change
+scope = {}
+exec('print \'hello world\'') in scope 
+
+# eval: 计算python表达式，并返回结果
+print eval(raw_input("Enter python expression: "))
