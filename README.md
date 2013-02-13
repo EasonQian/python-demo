@@ -1,4 +1,4 @@
-python-demo
-===========
+python
+======
 
-learning python: demos
+python learning
