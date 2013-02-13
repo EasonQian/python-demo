@@ -42,11 +42,41 @@ while x <= 3:
 	print x
 	x += 1
 
-name = ''
-while not name or name.isspace():
-	name = raw_input('please enter your name: ')
-print 'hello ' + name
+#name = ''
+#while not name or name.isspace():
+#	name = raw_input('please enter your name: ')
+#print 'hello ' + name
 
+# for
+for number in range(1, 10): # slice, 1 included and 10 not included!!
+	print number
 
+# for and map
+d = {'x':1, 'y':2, 'z':3} # order is not certain
+for key, value in d.items():
+	print key, 'corresponds to ', value
 
+# 并列迭代
+names = ['qianwei','helu','wangdandan','cuijingwen']
+ages = [22, 21, 22, 23]
+#for i in range(len(names)): # xrange不会一次性创建整个序列，而是一个一个创建，在数据量很大的时候推荐使用！！
+#	print names[i], 'is', ages[i], 'years old'
 
+# zip 压缩两个序列
+print zip(names, ages) 
+for name, age in zip(names, ages): # 并行迭代，在循环中解包！！！
+	print name, 'is', age, 'years old'
+# 当最短的序列用完的时候，压缩结束	
+print zip(range(5), xrange(100000))
+
+# enumerate: 索引-值的迭代
+strings = ['xxx', 'yyy', 'xxx']
+for index, string in enumerate(strings):
+	if 'xxx' in string:
+		strings[index] = 'change this'
+print strings
+
+# 列表推倒式：利用其他列表创建新列表
+import math
+print [math.pow(x, 2) for x in range(5)]
+print [(x, y) for x in range(5) for y in range(3)] # liek enum
