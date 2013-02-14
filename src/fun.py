@@ -16,7 +16,7 @@ print fib(10)
 print fib.__doc__ # 显示文档字符串
 help(fib)
 
-# 如果函数没有return，则默认返回的是None
+# 如果函数没有return，则默认返回的是None 
 def f_without_return():
     pass
 print f_without_return() # None

@@ -15,12 +15,10 @@ print l
 l[1:] = 'aaa'
 print l
 l[1:1] = 'bbb' #类似插入
-print a
 
 # 重要函数
 l.append(3) # 追加
 a_count = l.count('a') # 统计某个元素出现的次数
-l.extend(a) # 追加另一个列表, l被改变。但是用l+a则会返回全新列表，不会改变l
 l.index('a') # 找打第一个匹配值得下标
 l.insert(2, 'x') # 插入
 l.pop() # 移除最后一个，并返回
