@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 __metaclass__ = type
 
+##############################################
+# this is a good exmaple of python yield usage
+# yield one value one time and the process stop
+# at that point, and wait for next invoking
+# just like iterator
+##############################################
+
 # 定义冲突函数
 def conflict(state, nextX):
     nextY = len(state)
